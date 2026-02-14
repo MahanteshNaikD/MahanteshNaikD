@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D Mahantesh | Backend Software Developer</title>
+    <title>D Mahantesh | Software Developer — Backend, DevOps & AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -230,6 +230,60 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+      }
+
+      .hero-focus {
+        display: block;
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        letter-spacing: 0.02em;
+        margin-top: 0.5rem;
+      }
+
+      .hero-focus .dot {
+        color: var(--accent-green);
+        margin: 0 0.35em;
+      }
+
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin: 1.75rem 0 1.5rem;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        padding: 0.5rem 1.25rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border: 1px solid transparent;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .hero-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero-badge-backend {
+        background: rgba(0, 255, 136, 0.12);
+        color: var(--accent-green);
+        border-color: rgba(0, 255, 136, 0.35);
+      }
+
+      .hero-badge-devops {
+        background: rgba(0, 217, 255, 0.12);
+        color: var(--accent-cyan);
+        border-color: rgba(0, 217, 255, 0.35);
+      }
+
+      .hero-badge-ai {
+        background: rgba(157, 78, 221, 0.12);
+        color: var(--accent-purple);
+        border-color: rgba(157, 78, 221, 0.35);
       }
 
       .hero p {
@@ -663,6 +717,19 @@
           font-size: 2.5rem;
         }
 
+        .hero-focus {
+          font-size: 1.25rem;
+        }
+
+        .hero-badges {
+          margin: 1.25rem 0 1rem;
+        }
+
+        .hero-badge {
+          padding: 0.4rem 1rem;
+          font-size: 0.85rem;
+        }
+
         .hero p {
           font-size: 1rem;
         }
@@ -698,6 +765,172 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      /* How Backend, DevOps & AI work together - Visual */
+      .stack-visual {
+        padding: 5rem 0;
+      }
+
+      .stack-visual .section-header {
+        margin-bottom: 3rem;
+      }
+
+      .stack-diagram {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0;
+        flex-wrap: wrap;
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto 2rem;
+      }
+
+      .stack-node {
+        flex: 1 1 260px;
+        max-width: 280px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+        transition: all 0.3s;
+        z-index: 1;
+      }
+
+      .stack-node:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .stack-node-backend:hover { border-color: rgba(0, 255, 136, 0.5); }
+      .stack-node-devops:hover { border-color: rgba(0, 217, 255, 0.5); }
+      .stack-node-ai:hover { border-color: rgba(157, 78, 221, 0.5); }
+
+      .stack-node-icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 1.25rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+      }
+
+      .stack-node-backend .stack-node-icon {
+        background: rgba(0, 255, 136, 0.15);
+        color: var(--accent-green);
+      }
+
+      .stack-node-devops .stack-node-icon {
+        background: rgba(0, 217, 255, 0.15);
+        color: var(--accent-cyan);
+      }
+
+      .stack-node-ai .stack-node-icon {
+        background: rgba(157, 78, 221, 0.15);
+        color: var(--accent-purple);
+      }
+
+      .stack-node h3 {
+        font-family: "Syne", sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .stack-node-backend h3 { color: var(--accent-green); }
+      .stack-node-devops h3 { color: var(--accent-cyan); }
+      .stack-node-ai h3 { color: var(--accent-purple); }
+
+      .stack-node-desc {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .stack-node-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        justify-content: center;
+      }
+
+      .stack-node-tags span {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text-muted);
+      }
+
+      .stack-connectors {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .stack-connector {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      }
+
+      .stack-connector svg {
+        width: 32px;
+        height: 20px;
+        opacity: 0.6;
+      }
+
+      .stack-pipeline {
+        background: var(--bg-card);
+        border: 1px dashed var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .stack-pipeline-title {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+
+      .stack-pipeline-text {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      .stack-pipeline-text strong { color: var(--text-primary); }
+
+      @media (max-width: 768px) {
+        .stack-diagram {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .stack-node {
+          max-width: 100%;
+        }
+
+        .stack-connectors {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
@@ -710,6 +943,7 @@
         <nav>
           <div class="logo">D_Mahantesh</div>
           <ul class="nav-links">
+            <li><a href="#how-i-build">How I Build</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -721,15 +955,16 @@
       <section class="hero">
         <div class="hero-tag">⚡ Available for opportunities</div>
         <h1>
-          Backend Developer<br />Building
-          <span class="highlight">Scalable Systems</span>
+          I'm a <span class="highlight">Software Developer</span><br />
+          <span class="hero-focus">Backend <span class="dot">·</span> DevOps <span class="dot">·</span> AI</span>
         </h1>
+        <div class="hero-badges">
+          <span class="hero-badge hero-badge-backend">Backend</span>
+          <span class="hero-badge hero-badge-devops">DevOps</span>
+          <span class="hero-badge hero-badge-ai">AI</span>
+        </div>
         <p>
-          Software Developer with 4+ years of experience designing and
-          delivering scalable systems. Strong focus on performance, reliability,
-          and system optimization. Experienced in building production-ready
-          solutions for social platforms, IoT systems, and real-time
-          applications.
+          I build and ship systems across <strong>backend</strong>, <strong>DevOps</strong>, and <strong>AI</strong>—from APIs and databases to CI/CD and automation, and intelligent applications. 4+ years designing scalable, production-ready solutions for social platforms, IoT, and real-time systems.
         </p>
         <div class="cta-buttons">
           <a href="#contact" class="btn btn-primary">Get in Touch →</a>
@@ -753,6 +988,88 @@
             <div class="stat-number">100%</div>
             <div class="stat-label">Uptime Achievement</div>
           </div>
+        </div>
+      </section>
+
+      <section id="how-i-build" class="stack-visual fade-in">
+        <div class="section-header">
+          <div class="section-tag">How I Build</div>
+          <h2 class="section-title">How Backend, DevOps & AI Work Together</h2>
+          <p class="section-description">
+            One integrated pipeline: robust APIs and data, automated delivery, and intelligent features.
+          </p>
+        </div>
+
+        <div class="stack-diagram">
+          <div class="stack-node stack-node-backend">
+            <div class="stack-node-icon" aria-hidden="true">{ }</div>
+            <h3>Backend</h3>
+            <p class="stack-node-desc">
+              APIs, databases, and business logic. The foundation that serves data and handles requests reliably at scale.
+            </p>
+            <div class="stack-node-tags">
+              <span>REST / GraphQL</span>
+              <span>DB</span>
+              <span>Cache</span>
+              <span>Auth</span>
+            </div>
+          </div>
+
+          <div class="stack-node stack-node-devops">
+            <div class="stack-node-icon" aria-hidden="true">⟳</div>
+            <h3>DevOps</h3>
+            <p class="stack-node-desc">
+              CI/CD, containers, and monitoring. Automate build, test, deploy, and keep systems healthy in production.
+            </p>
+            <div class="stack-node-tags">
+              <span>CI/CD</span>
+              <span>Docker</span>
+              <span>Cloud</span>
+              <span>Logs</span>
+            </div>
+          </div>
+
+          <div class="stack-node stack-node-ai">
+            <div class="stack-node-icon" aria-hidden="true">◉</div>
+            <h3>AI</h3>
+            <p class="stack-node-desc">
+              Models, data pipelines, and inference. Add intelligence—recommendations, automation, and smarter products.
+            </p>
+            <div class="stack-node-tags">
+              <span>APIs</span>
+              <span>Data</span>
+              <span>Models</span>
+              <span>ML Ops</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-connectors">
+          <span class="stack-connector">
+            <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 10h24m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Backend feeds DevOps
+          </span>
+          <span class="stack-connector">
+            <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 10h24m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            DevOps deploys AI
+          </span>
+          <span class="stack-connector">
+            <svg viewBox="0 0 32 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 10h24m0 0l-5-5m5 5l-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            AI enhances Backend
+          </span>
+        </div>
+
+        <div class="stack-pipeline">
+          <div class="stack-pipeline-title">The pipeline</div>
+          <p class="stack-pipeline-text">
+            <strong>Backend</strong> exposes APIs and stores data → <strong>DevOps</strong> builds, tests, and deploys to production → <strong>AI</strong> layers on recommendations, automation, and insights. Together they deliver scalable, reliable, and intelligent systems.
+          </p>
         </div>
       </section>
 
